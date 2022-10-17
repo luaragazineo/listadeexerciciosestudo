@@ -49,6 +49,7 @@ section {
 div {
     text-align: center;
     border: 5px solid white;
+    border-radius: 5px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.625);
     width: 300px;
     height: 100px;
