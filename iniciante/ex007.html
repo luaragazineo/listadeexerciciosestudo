@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+    <style>
+         body {
+            background-color: gray;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
+
+    <script>
+        confirm('Vamos calcular sua média ?')
+        nota1 = Number(prompt('Informe nota da primeira prova da Unidade I'))
+        nota2 = Number(prompt('Informe nota da segunda prova da Unidade I'))
+        nota3 = Number(prompt('Informe nota da primeira prova da Unidade II'))
+        nota4 = Number(prompt('Informe nota da segunda prova da Unidade II'))
+        mediaUni1 = ((nota1 * 0.3)+(nota2 * 0.7)) 
+        mediaUni2 = ((nota3 * 0.3)+(nota4 * 0.7))
+        mediatotal = (mediaUni1 + mediaUni2)/2
+
+        document.write(`Notas: <br>
+         Unidade 1 : Nota 1 (${nota1}); Nota 2 (${nota2}); Média da Unidade I (${mediaUni1}) <br> 
+         Unidade 2 : Nota 1 (${nota3}); Nota 2 (${nota4}); Média da Unidade II (${mediaUni2}) <br> 
+         Média Total: ${mediatotal} `)
+    </script>
+</body>
+</html>
