@@ -18,8 +18,8 @@
 
     <script>
         alert('Vamos calcular o seu salário? Obs.:Digite valor com "." no lugar da "," e vice-versa.')
-        valorHora = prompt('Digite quanto você ganha por hora. ')
-        horastrabsem = prompt('Quantas horas você trabalha por semana?')
+        valorHora = Number(prompt('Digite quanto você ganha por hora. '))
+        horastrabsem = Number(prompt('Quantas horas você trabalha por semana?'))
         salario = valorHora * horastrabsem * 5
         document.write(`O seu salário: <br> 
         ${salario.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}`)

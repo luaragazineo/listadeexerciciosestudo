@@ -10,6 +10,7 @@
             background-color: gray;
             font-size: 20pt;
             font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
         }
     </style>
 </head>
@@ -17,7 +18,13 @@
     <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
 
     <script>
-        
+        alert('Olá! Vamos converter de Real para Dólar?')
+        dolar = Number(prompt('Qual o valor do Dólar hoje?'))
+        real = Number(prompt('Qual valor em Real que deseja converter para Dólar?'))
+        convert = real / dolar
+
+        document.write(`O valor ${real.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}  convertido para Dólar: <br> ${convert.toLocaleString('pt-BR',{style:'currency', currency: 'USD'})}
+        `)
     </script>
 </body>
 </html>
