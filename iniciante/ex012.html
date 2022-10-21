@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 12</title>
+    <style>
+        body {
+            background-color: gray;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
+
+    <script>
+        confirm('Vamos fazer uns cálculos?')
+        n1 = Number(prompt('Digite um número'))
+        n2 = Number(prompt('Digite outro número'))
+        soma = n1 + n2
+        subtrac = n1 - n2
+        mult = n1 * n2
+        div = n1 / n2
+        divint = n1 % n2
+        pot = n1 ** n2
+        document.write(`A soma entre ${n1} e ${n2} = ${soma} ; <br>
+        A subtração entre ${n1} e ${n2} = ${subtrac} ;<br>
+        A multiplicação entre ${n1} e ${n2} = ${mult} ; <br>
+        A divisão entre ${n1} e ${n2} = ${div.toFixed(2)} ; <br>
+        O resto da divisão inteira entre ${n1} e ${n2} = ${divint} ; <br>
+        A potenciação entre ${n1} e ${n2} = ${pot}.`)
+
+    </script>
+</body>
+</html>
