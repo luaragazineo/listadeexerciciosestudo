@@ -18,25 +18,12 @@
     <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
 
     <script>
-        num = Number(prompt('Digite um número par maior do que 0:'))
+        alert('Vamos testar se seu número é par ou ímpar')
+        num = Number(prompt('Digite um número diferente de Zero:'))
         
-        document.write(` O número ${num} - 2  <br>`)
-        num = num-2
-        sub = num >0 ? `${num} `:`Fim `
-        num = num-2
-        document.write(`${sub} - 2 <br>`)
-        sub = num >0 ? `${num} `:`Fim `
-        num -= 2 
-        document.write(`${sub} -2 <br>`)
-        sub = num >0 ? `${num} `:`Fim `
-        num -= 2 
-        document.write(`${sub} -2 <br> `)
-        sub = num >0 ? `${num} `:`Fim `
-        num -= 2 
-        document.write(`${sub} -2  <br>`)
-        sub = num >0 ? `${num} `:`Fim `
-        num -= 2 
-        document.write(`${sub} <br>`)
+
+        res = num % 2 == 0 ? 'par' : 'ímpar'
+        alert(`O número é ${res} `)
 
     </script>
 </body>
