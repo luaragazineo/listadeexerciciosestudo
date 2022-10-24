@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 16</title>
+    <style>
+        body {
+            background-color: gray;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
+
+    <script>
+        confirm('Digite "1" para verdadeiro e "0" para falso:')
+        idade= prompt('Você tem mais de 18 anos?')
+        sexo = prompt('Você é homem?')
+        
+        resid = idade == 1 ? 'maior de idade':'menor de idade'
+        ressexo = sexo == 1 ? 'Homem' : 'Mulher'
+
+        alert(`Então você é um(a) ${ressexo} ${resid} `)
+    </script>
+</body>
+</html>
