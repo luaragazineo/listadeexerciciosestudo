@@ -74,6 +74,10 @@ main {
   padding: 5px;
 }
 
+main ul {
+    columns: 3;
+}
+
 li {
     padding: 5px;
     padding-left: 10px;
