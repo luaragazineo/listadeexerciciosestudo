@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 19</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+        div {
+            border:  solid 1px  #000000;
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
+    
+    <h1>Blocos coloridos :</h1>
+    <div id="bloco1"></div> 
+    <div id="bloco2"></div>
+    <div id="bloco3"></div>
+    
+    <script>
+        confirm('Vamos colorir 3 blocos')
+        cor1 = prompt('Digite uma cor válida para CSS: (black, #000000 , rgd(0, 0, 0)) ')
+        cor2 = prompt('Digite outra cor válida para CSS: (black, #000000 , rgd(0, 0, 0))  ')
+        cor3 = prompt('Digite próxima cor válida para CSS: (black, #000000 , rgd(0, 0, 0))  ')
+
+        blococor1 = document.getElementById('bloco1')
+        blococor2 = document.getElementById('bloco2')
+        blococor3 = document.getElementById('bloco3')
+
+        blococor1.style.background = cor1
+        blococor2.style.background = cor2
+        blococor3.style.background = cor3
+
+    </script>
+</body>
+</html>

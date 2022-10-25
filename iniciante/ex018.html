@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 18</title>
+    <style>
+        body {
+            background-color: gray;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="iniciante.html">&LeftArrow; Voltar </a></p>
+
+    <h1>Macarrão Ao Vivo: </h1>
+    <h2>Escolha até 5 opções para o seu macarrão</h2>
+    <p>Ingrediente 1 : </p>
+    <p id="ing1"></p>
+    <p>Ingrediente 2 :</p>
+    <p id="ing2"></p>
+    <p>Ingrediente 3 :</p>
+    <p id="ing3"></p>
+    <p>Ingrediente 4 :</p>
+    <p id="ing4"></p>
+    <p>Ingrediente 5 :</p>
+    <p id="ing5"></p>
+    <script>
+        res1 = prompt('Escolha o molho: (tomate, bolonhesa ou branco)')
+        res2 = prompt('Escolha sua proteína: (Frango, carne ou Atum)')
+        res3 = prompt('Escolha seu queijo: (Catupiry, prato ou cheddar) ')
+        res4 = prompt('Escolha complemento 1: (Palmito, Azeitona ou Oregano)')
+        res5 = prompt('Escolha complemento 2: (Queijo ralado, presunto ou tomate em cubos)')
+
+        resing1 = document.getElementById('ing1')
+        resing1.innerText = '  ' + res1
+        resing2 = document.getElementById('ing2')
+        resing2.innerText = '  ' + res2
+        resing3 = document.getElementById('ing3')
+        resing3.innerText = '  ' + res3
+        resing4 = document.getElementById('ing4')
+        resing4.innerText = '  ' + res4
+        resing5 = document.getElementById('ing5')
+        resing5.innerText = '  ' + res5
+        
+        
+        
+        
+        
+        
+
+    </script>
+</body>
+</html>
