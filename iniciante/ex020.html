@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 20</title>
+    <style>
+         body {
+            background-color: #ffffff;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="iniciante.html"> &LeftArrow; Voltar</a></p>
+
+    <p>Selecione a cor do fundo do site:  </p>
+    <input type="color" name="corfundo" id="corfundo"> <input type="button" value="Enter" id="enter">
+
+    <script>
+        
+        botao = document.getElementById('enter')
+      
+
+      function clicar() {
+          cor = document.getElementById('corfundo')
+          colorir = cor.value
+          fundo = document.getElementsByTagName('body')[0]
+          fundo.style.background = colorir
+      }
+      botao.addEventListener('click', clicar)
+    </script>
+</body>
+</html>
