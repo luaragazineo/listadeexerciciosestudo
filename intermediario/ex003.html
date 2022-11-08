@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 03</title>
+    <style>
+        body {
+            background-color: gray;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+        div {
+            font-size: 95pt;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+            line-height: 400px;
+            margin: auto;
+            margin-top: 90px;
+            border-radius: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <p><a href="intermediario.html"> &LeftArrow; Voltar</a></p>
+
+    Digite um número inteiro: <input type="text" name="txtn" id="txtn"> <input type="button" value="Enviar" onclick="clicar()">
+
+    <div id="bloco"> </div>
+    <script>
+        function clicar() {
+            txtnum = document.getElementById('txtn')
+            num = (txtnum.value)
+            res = document.getElementById('bloco')
+
+            if (num%2 == 0){
+                res.innerHTML = ` PAR `
+                res.style.color = 'white'
+                res.style.background = 'green'
+            }else {
+                res.innerHTML = ` ÍMPAR`
+                res.style.color = 'white'
+                res.style.background = 'red'
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+    <style>
+        body {
+            background-color: gray;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+        .obs{
+            margin-top: -40px;
+            font-size: 14px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 1em;
+            font-style: italic;
+        }
+        div {
+            background-color: white;
+            width: 600px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        main {
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            width: 600px;
+            text-align: center;
+        }
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="intermediario.html"> &leftarrow; Voltar</a></p>
+    <h1>Digite o valor do ingresso:</h1>
+    <p class="obs">**sem opções para estudantes ou sócios</p>
+    <main>
+         Valor:  <input type="number" name="txtval" id="txtval"> Idade: <input type="number" name="txtid" id="txtid"> <input type="button" value="Enviar" onclick="calcular()">
+    </main>
+      <div id="resultado"></div> 
+    
+    <script>
+        function calcular () {
+            txtv = document.getElementById('txtval')
+            valor = Number(txtv.value)
+            txtidade = document.getElementById('txtid')
+            idade = (txtidade.value)
+            meia = valor/2
+            res = document.getElementById('resultado')
+
+            if ( idade < 18 || idade > 64 ){
+                res.innerHTML = ` Valor do ingresso (Meia entrada): ${meia.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} ` 
+            } else {
+                res.innerHTML = ` Valor do ingresso (Inteira): ${valor.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} `
+            }
+        }
+    </script>
+</body>
+</html>
+
