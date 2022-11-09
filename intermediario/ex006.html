@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+    <style>
+         body {
+            background-color: gray;
+            font-size: 20pt;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 50px;
+        }
+        main {
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="intermediario.html"> &leftarrow; Voltar</a></p>
+    <main>
+        <p>Digite seu tipo sanguíneo</p>
+        <p>Tipo: <input type="text" name="txtsangue" id="txtsangue"> <input type="button" value="Enviar" id="bt"> <input type="button" value="Limpar" id="limpar"></p>
+
+        <p>Doadores e Receptores: </p>
+        <p id="res"></p>
+    </main>
+
+    <script>
+        botao = document.getElementById('bt')
+        btlimpar = document.getElementById('limpar')
+        function clicar(){
+            sangue = document.getElementById('txtsangue').value
+            res = document.getElementById('res')
+            switch (sangue){
+                case 'A+' :
+                res.innerHTML = `Pode doar para: AB+ e A+ <br> Pode receber doação de: A+, A-, O+ e O- `
+                    break
+                case 'A-' :
+                res.innerHTML = `Pode doar para: A+, A-, AB+, AB- <br> Pode receber doação de: A- e O- `
+                    break
+                case 'B+' :
+                res.innerHTML = `Pode doar para: AB+ e B+ <br> Pode receber doação de: B+, B-, O+ e O- `    
+                break
+                case 'B-' :
+                res.innerHTML = `Pode doar para: AB+, AB-, B+ e B- <br> Pode receber doação de: B- e O- `   
+                break
+                case 'AB+' :
+                res.innerHTML = `Pode doar para: AB+ <br> Pode receber doação de: Todos os tipos `   
+                break
+                case 'AB-' : 
+                res.innerHTML = `Pode doar para: AB+ e AB- <br> Pode receber doação de: A-, B-, O- e AB- `    
+                break                
+                case 'O+' :
+                res.innerHTML = `Pode doar para: A+, B+, AB+ e O+ <br> Pode receber doação de: O+ e O- `    
+                break
+                case 'O-' : 
+                res.innerHTML = `Pode doar para: Todos os tipos <br> Pode receber doação de: O- `    
+                break
+                default:
+                res.innerHTML = `[ERRO] Valor inválido. Favor reescrever em maiúsculo `    
+                break                                                   
+            }
+        }
+
+        function limpar(){
+            res.innerHTML = ` `
+        }
+
+        botao.addEventListener('click', clicar)
+        btlimpar.addEventListener('click', limpar)
+    </script>
+</body>
+</html>
