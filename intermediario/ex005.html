@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+    <style>
+        body {
+           background-color: gray;
+           font-size: 15pt;
+           font-family: Arial, Helvetica, sans-serif;
+          
+       }
+       main {
+           padding: 10px;
+           margin: auto;
+           background-color: white;
+           border-radius: 10px;
+           width: 600px;
+           text-align: center;
+       }
+   </style>
+</head>
+<body>
+    <p><a href="intermediario.html"> &leftarrow; Voltar</a></p>
+    <main>
+       <h1>Digite 3 valores:</h1> 
+       <p><input type="number" name="txtn1" id="txtn1"></p>
+       <p><input type="number" name="txtn2" id="txtn2"></p>
+       <p><input type="number" name="txtn3" id="txtn3"></p>
+       <p><input type="button" value="Enviar" id="enviar"></p>
+       <p>Resposta:</p>
+       <p id="res"></p>
+    </main>
+    <script>
+      let  botao = document.getElementById('enviar')
+
+      function começar(){
+        n1 = Number(document.getElementById('txtn1').value)
+        n2 = Number(document.getElementById('txtn2').value)
+        n3 = Number(document.getElementById('txtn3').value)
+        res = document.getElementById('res')
+
+        if (n1!=n2 && n1!=n3 && n2!=n3){
+            res.innerHTML = `NENHUM NÚMERO SE REPETE `
+        } else if ((n1==n2 && n1!= n3)||(n1==n3 && n1!=n2)||(n2==n3 && n2!=n1)){
+            res.innerHTML = `DOIS NÚMEROS SE REPETEM`
+        } else if (n1==n2 && n1==n3){
+            res.innerHTML = `TODOS OS VALORES SE REPETEM `
+        }
+      }
+      botao.addEventListener('click', começar)
+    </script>
+</body>
+</html>
