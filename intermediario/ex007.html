@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+    <style>
+          body {
+            background-color: gray;
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main {
+           padding: 10px;
+           margin: auto;
+           background-color: white;
+           border-radius: 10px;
+           width: 600px;
+           text-align: center;
+       }
+        .resposta {
+            margin-top: 20px;
+       }
+    </style>
+</head>
+<body>
+    <p><a href="intermediario.html"> &leftarrow; Voltar</a></p>
+
+    <main>
+        <h1> Teste de Aptidão</h1>
+        <p>Nome: <input type="text" name="txtnome" id="txtnome"></p>
+        <p>Idade: <input type="text" name="txtid" id="txtid"></p>
+        <p>Peso: <input type="text" name="txtpeso" id="txtpeso"></p>
+        <p>Sexo: <input type="text" name="txtsexo" id="txtsexo"></p>
+        <p>* Digite "F" para feminino e "M" para masculino; </p>
+        <p>* Digite Peso valor inteiro em Quilos</p>
+        <input type="button" value="Enviar" onclick="Calcular()">
+    </main>
+    <main class="resposta">
+        <p id="res"></p>
+    </main>
+    <script>
+
+        function Calcular() {
+            let nome = document.getElementById('txtnome').value
+            let idade = document.getElementById('txtid').value
+            let peso = document.getElementById('txtpeso').value
+            let sexo = document.getElementById('txtsexo').value
+            let res = document.getElementById('res')
+
+            if (idade<=0 || peso <=0 || (sexo!='F' && sexo!='M')){
+                res.innerHTML = ` Dados inválidos `
+            } else if(idade>18){
+                if (sexo == 'M' && peso >= 60){
+                    res.innerHTML = `Caro(a) ${nome}, você se encontra Apto(a) para participar  ` 
+                }else if (sexo =='F' && peso >=45){
+                    res.innerHTML = `Caro(a) ${nome}, você se encontra Apto(a) para participar.   `
+                }else {
+                    res.innerHTML = `Caro(a) ${nome}, você se encontra Inapto(a) para participar.   `
+                }
+            }else {
+                res.innerHTML = `Caro(a) ${nome}, você se encontra Inapto(a) para participar. Volte quando tiver mais de 18 anos  `
+            }
+        }
+    </script>
+</body>
+</html>
